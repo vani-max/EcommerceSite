@@ -10,7 +10,7 @@ import { fireDB } from '../../firebase/firebaseConfig';
 
 function ProductInfo() {
     const context = useContext(myContext);
-    const { loading, setLoading } = context;
+    const {setLoading } = context;
 
     const [products, setProducts] = useState('')
     const params = useParams()
@@ -33,7 +33,7 @@ function ProductInfo() {
 
     useEffect(() => {
         getProductData()
-    },[])
+    })
 
 
 
